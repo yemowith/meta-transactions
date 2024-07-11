@@ -1,0 +1,17 @@
+{
+  "name": "meta-transactions",
+  "version": "1.0.0",
+  "description": "A project demonstrating a meta-transaction setup using Solidity and Node.js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "solc --optimize --bin --abi --include-path node_modules/ --base-path . contracts/MetaTransaction.sol -o build --overwrite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ethereumjs-tx": "^2.1.2",
+    "web3": "^4.11.0"
+  }
+}

@@ -1,0 +1,21 @@
+# Node modules
+node_modules/
+
+# Hardhat files
+cache/
+artifacts/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.vscode/
+.idea/

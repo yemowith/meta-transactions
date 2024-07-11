@@ -1,0 +1,6 @@
+// TODO: Replace with your Infura project ID, account address, and private key
+const YOUR_INFURA_PROJECT_ID = "YOUR_INFURA_PROJECT_ID";
+const YOUR_ACCOUNT_ADDRESS = "YOUR_ACCOUNT_ADDRESS";
+const YOUR_PRIVATE_KEY = "YOUR_PRIVATE_KEY";
+
+export { YOUR_INFURA_PROJECT_ID, YOUR_ACCOUNT_ADDRESS, YOUR_PRIVATE_KEY };
