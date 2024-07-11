@@ -1,19 +1,11 @@
-const {
-  PROVIDER_URL,
-  YOUR_ACCOUNT_ADDRESS,
-  YOUR_PRIVATE_KEY,
-  CONTRACT_ADDRESS,
-} = require("./Config");
+const { web3, fs, privateKey, account } = require("./Helpers");
+const { CONTRACT_ADDRESS } = require("./Config");
 
 const { signMetaTransaction } = require("./signMessage");
 
-const Web3 = require("web3");
 const Tx = require("ethereumjs-tx").Transaction;
 
-const web3 = new Web3(new Web3.providers.HttpProvider(PROVIDER_URL));
-
-const relayerPrivateKey = Buffer.from(YOUR_PRIVATE_KEY, "hex");
-const userAddress = YOUR_ACCOUNT_ADDRESS;
+const userAddress = account;
 const contractAddress = CONTRACT_ADDRESS;
 
 const functionSignature = web3.eth.abi.encodeFunctionCall(
@@ -77,7 +69,7 @@ async function sendTransaction() {
     data: txData,
   });
 
-  tx.sign(relayerPrivateKey);
+  tx.sign(privateKey);
 
   const serializedTx = tx.serialize();
   web3.eth

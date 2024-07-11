@@ -1,12 +1,4 @@
-const {
-  PROVIDER_URL,
-  YOUR_ACCOUNT_ADDRESS,
-  YOUR_PRIVATE_KEY,
-} = require("./Config");
-
-const Web3 = require("web3");
-const web3 = new Web3(new Web3.providers.HttpProvider(PROVIDER_URL));
-const userAddress = YOUR_ACCOUNT_ADDRESS;
+const { web3, privateKey } = require("./Helpers");
 
 async function signMetaTransaction(functionSignature) {
   const nonce = await web3.eth.getTransactionCount(userAddress);
@@ -16,10 +8,7 @@ async function signMetaTransaction(functionSignature) {
     { t: "bytes", v: functionSignature }
   );
 
-  const { r, s, v } = await web3.eth.accounts.sign(
-    metaTxHash,
-    YOUR_PRIVATE_KEY
-  );
+  const { r, s, v } = await web3.eth.accounts.sign(metaTxHash, privateKey);
   return { r, s, v };
 }
 
