@@ -2,6 +2,8 @@
 
 This is a simple example of a meta transaction. It is a way to send a transaction to a contract that will then send a transaction to another contract.
 
+![Dinamik Logo](https://via.placeholder.com/200x60/000000/FFFFFF&text=With%20Yemo)
+
 # Before running
 
 - [ ] Replace the contract address in the `Config.js` file with the address of the contract you deployed.
