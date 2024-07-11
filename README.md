@@ -1,58 +1,15 @@
-# Meta-Transaction Project
+# Meta Transactions
 
-This project demonstrates a meta-transaction setup using Solidity and Node.js.
+This is a simple example of a meta transaction. It is a way to send a transaction to a contract that will then send a transaction to another contract.
 
-## Project Structure
+# Usage
 
-meta-transaction/
-├── build/
-│ ├── MetaTransaction.abi
-│ └── MetaTransaction.bin
-├── script/
-│ ├── Config.js
-│ ├── Deploy.js
-│ ├── Relayer.js
-│ └── signMessage.js
-└── README.md
+1. Run `npm install` to install the dependencies.
+2. Run `npm run deploy` to deploy the contract.
+3. Run `npm run relayer` to start the relayer.
+4. Run `npm run sign` to sign the message.
 
-## Setup
+# TODO
 
-1. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-
-2. Replace placeholder values in `script/Config.js` with your actual Infura project ID, account address, and private key.
-
-## Deploy Contract
-
-To deploy the contract, run:
-
-```bash
-node script/Deploy.js
-```
-
-### Çalıştırma
-
-1. Gerekli paketleri yükleyin:
-
-   ```bash
-   npm install
-   ```
-
-2. Kontratı deploy edin:
-
-   ```bash
-   node script/Deploy.js
-   ```
-
-3. `Relayer.js` scriptini çalıştırarak meta-transaction'ı gönderin:
-   ```bash
-   node script/Relayer.js
-   ```
-
-### Bir Sonraki Adım
-
-**a.** Birim testler ekleyin ve kodun doğruluğunu kontrol edin.
-**b.** İmzalama sürecini daha güvenli hale getirmek için kullanıcıdan imza alırken güvenliği arttıracak ek adımlar ekleyin.
+- [ ] Add a way to send a transaction to the contract from the relayer
+- [ ] Add a way to send a transaction to the contract from the signer
