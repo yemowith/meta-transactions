@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "solc --optimize --bin --abi --include-path node_modules/ --base-path . contracts/MetaTransaction.sol -o build --overwrite"
+    "build": "solc --optimize --bin --abi --include-path node_modules/ --base-path . contracts/MetaTransaction.sol -o build --overwrite",
+    "deploy": "node script/Deploy.js",
+    "relayer": "node script/Relayer.js",
+    "sign": "node script/signMessage.js"
   },
   "keywords": [],
   "author": "",

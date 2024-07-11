@@ -1,23 +1,21 @@
 const {
-  YOUR_INFURA_PROJECT_ID,
+  PROVIDER_URL,
   YOUR_ACCOUNT_ADDRESS,
   YOUR_PRIVATE_KEY,
+  CONTRACT_ADDRESS,
 } = require("./Config");
+
 const { signMetaTransaction } = require("./signMessage");
 
 const Web3 = require("web3");
 const Tx = require("ethereumjs-tx").Transaction;
 
-const web3 = new Web3(
-  new Web3.providers.HttpProvider(
-    `https://mainnet.infura.io/v3/${YOUR_INFURA_PROJECT_ID}`
-  )
-);
+const web3 = new Web3(new Web3.providers.HttpProvider(PROVIDER_URL));
 
 const relayerPrivateKey = Buffer.from(YOUR_PRIVATE_KEY, "hex");
 const userAddress = YOUR_ACCOUNT_ADDRESS;
+const contractAddress = CONTRACT_ADDRESS;
 
-const contractAddress = "CONTRACT_ADDRESS";
 const functionSignature = web3.eth.abi.encodeFunctionCall(
   {
     name: "yourFunction",

@@ -1,16 +1,11 @@
-const Web3 = require("web3");
 const {
-  YOUR_INFURA_PROJECT_ID,
+  PROVIDER_URL,
   YOUR_ACCOUNT_ADDRESS,
   YOUR_PRIVATE_KEY,
 } = require("./Config");
 
-const web3 = new Web3(
-  new Web3.providers.HttpProvider(
-    `https://mainnet.infura.io/v3/${YOUR_INFURA_PROJECT_ID}`
-  )
-);
-
+const Web3 = require("web3");
+const web3 = new Web3(new Web3.providers.HttpProvider(PROVIDER_URL));
 const userAddress = YOUR_ACCOUNT_ADDRESS;
 
 async function signMetaTransaction(functionSignature) {

@@ -1,5 +1,5 @@
 const {
-  YOUR_INFURA_PROJECT_ID,
+  PROVIDER_URL,
   YOUR_ACCOUNT_ADDRESS,
   YOUR_PRIVATE_KEY,
 } = require("./Config");
@@ -7,12 +7,7 @@ const {
 const Web3 = require("web3");
 const fs = require("fs");
 
-const web3 = new Web3(
-  new Web3.providers.HttpProvider(
-    `https://mainnet.infura.io/v3/${YOUR_INFURA_PROJECT_ID}`
-  )
-);
-
+const web3 = new Web3(new Web3.providers.HttpProvider(PROVIDER_URL));
 const account = YOUR_ACCOUNT_ADDRESS;
 const privateKey = Buffer.from(YOUR_PRIVATE_KEY, "hex");
 
